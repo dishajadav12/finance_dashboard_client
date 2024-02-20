@@ -1,0 +1,78 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.topBox {
+
+z-index: 1; 
+  .trans_title{
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    margin-bottom: 40px;
+
+    @include xxl{
+      font-size: 24px;
+    }
+  }
+
+  .add-transaction {
+    margin-right: 10px;
+    cursor: pointer;
+    transition: width 0.3s; 
+}
+  .list {
+    .listItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $soft-bg ;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      .user {
+        display: flex;
+        gap: 20px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+
+          @include xxl{
+            display: none;
+          }
+          @include lg{
+            display: block;
+          }
+        }
+
+        .userTexts {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .username {
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .email {
+            font-size: 12px;
+
+            @include xxl{
+              display: none;
+            }
+            @include lg{
+              display: block;
+            }
+          }
+        }
+      }
+
+      .amount {
+        font-weight: 500;
+      }
+    }
+  }
+}
